@@ -20,7 +20,8 @@ def get_prefix(bot, message):
 description = """AYAYAYYAYA"""
 bot = commands.Bot(command_prefix= get_prefix, description = description)
 
-startup_extensions = startup_extensions = ["modules.misc",
+startup_extensions = ["modules.misc",
+                    "modules.developer",
                     ]
 
 #Events:
@@ -29,6 +30,7 @@ async def on_ready():
     print("Japan #1")
 @bot.event
 async def on_message(message):
+    await bot.process_commands(message)
     if message.author == bot.user:
         return
     if isinstance(message.channel, discord.abc.PrivateChannel)and (message.author.id != 180852994231762945):
