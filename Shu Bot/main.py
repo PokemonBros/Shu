@@ -22,6 +22,9 @@ bot = commands.Bot(command_prefix= get_prefix, description = description)
 
 startup_extensions = ["modules.misc",
                     "modules.developer",
+                    "modules.math",
+                    "modules.game",
+                    "modules.music",
                     ]
 
 #Events:

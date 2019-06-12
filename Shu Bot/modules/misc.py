@@ -23,7 +23,7 @@ class Misc(commands.Cog):
     @commands.command()
     async def favorite(self, ctx, person: str = "Shu"):
       await ctx.send('My favorite person is {}.'.format(person))
-      await client.delete_message(message)
+      
          
    
 def setup(bot):
